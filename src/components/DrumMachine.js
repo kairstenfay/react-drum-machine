@@ -18,7 +18,7 @@ export default class DrumMachine extends Component {
         for (let key of Object.keys(CONSTANTS)) {
             console.log(key); // e.g. 'guineapig'
             console.log(CONSTANTS[key].text); // e.g. 'Q'
-            cells.push(<DrumPad soundClip={key} text={CONSTANTS[key].text} />);
+            cells.push(<DrumPad key={key} soundClip={key} text={CONSTANTS[key].text} />);
         }
 
         return (
