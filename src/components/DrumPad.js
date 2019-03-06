@@ -39,8 +39,14 @@ export default class DrumPad extends Component {
 
     handleKeyPress(event) {
         console.log(event.key);
-        if (document.getElementById(event.key.toUpperCase())) {
-            document.getElementById(event.key.toUpperCase()).play();
+        let keyedElement = document.getElementById(event.key.toUpperCase());
+        if (!keyedElement) {
+            return;
+        }
+        if (!keyedElement.paused) {
+            keyedElement.pause();
+        } else {
+            keyedElement.play();
         }
     }
 
