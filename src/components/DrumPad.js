@@ -38,8 +38,9 @@ export default class DrumPad extends Component {
     }
 
     handleKeyPress(event) {
-        if (event.keyCode === 81) {
-            document.getElementById('Q').play();
+        console.log(event.key);
+        if (document.getElementById(event.key.toUpperCase())) {
+            document.getElementById(event.key.toUpperCase()).play();
         }
     }
 
