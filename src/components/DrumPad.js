@@ -10,6 +10,17 @@ import raccoon from '../audio/Raccoon-J_Dawg-688727657.mp3';
 import turkey from '../audio/Turkey_Call-JimBob-1691466258.mp3';
 import bluejay from '../audio/bluejay_call-Mike_Koenig-591302150.mp3';
 
+import guineapigImg from '../img/guineapig.png';
+import alpacaImg from '../img/alpaca.png';
+import frogImg from '../img/frog.png';
+import gibbonmonkeyImg from '../img/gibbonmonkey.png';
+import horseImg from '../img/horse.png';
+import labradorImg from '../img/labrador.png';
+import raccoonImg from '../img/raccoon.jpeg';
+import turkeyImg from '../img/turkey.png';
+import bluejayImg from '../img/bluejay.png';
+
+
 const MAP = {
     Q: guineapig,
     W: horseblow,
@@ -20,6 +31,18 @@ const MAP = {
     Z: labrador,
     X: turkey,
     C: gibbonmonkey
+};
+
+const IMGMAP = {
+    Q: guineapigImg,
+    W: horseImg,
+    E: raccoonImg,
+    A: bluejayImg,
+    S: alpacaImg,
+    D: frogImg,
+    Z: labradorImg,
+    X: turkeyImg,
+    C: gibbonmonkeyImg
 };
 
 export default class DrumPad extends Component {
@@ -53,6 +76,7 @@ export default class DrumPad extends Component {
     render() {
         return (
             <div className="drum-pad" id={this.props.soundClip}>
+                <img class="pad-icon" src={IMGMAP[this.props.text]} />
                 <audio className="clip" id={this.props.text} controls>
                     <source src={MAP[this.props.text]} />
                 </audio>

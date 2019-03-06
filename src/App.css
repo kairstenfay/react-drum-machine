@@ -23,6 +23,11 @@
   border-radius: 5px;
 }
 
+.pad-icon {
+  width: 100px;
+  height: auto;
+}
+
 audio {
   width: 0;
   height: 0;
