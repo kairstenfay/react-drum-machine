@@ -20,7 +20,9 @@ import raccoonImg from '../img/raccoon.jpeg';
 import turkeyImg from '../img/turkey.png';
 import bluejayImg from '../img/bluejay.png';
 
+import actions from '../actions/drumPadActions.js';
 
+// TODO: figure out where to place these
 const MAP = {
     Q: guineapig,
     W: horseblow,
@@ -51,32 +53,19 @@ export default class DrumPad extends Component {
         super(props);
         this.state = {
         };
-        this.handleKeyPress = this.handleKeyPress.bind(this);
     }
     componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyPress);
+        document.addEventListener('keydown', actions.handleKeyPress);
     }
     componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleKeyPress);
-    }
-
-    handleKeyPress(event) {
-        console.log(event.key);
-        let keyedElement = document.getElementById(event.key.toUpperCase());
-        if (!keyedElement) {
-            return;
-        }
-        if (!keyedElement.paused) {
-            keyedElement.pause();
-        } else {
-            keyedElement.play();
-        }
+        document.removeEventListener('keydown', actions.handleKeyPress);
     }
 
     render() {
         return (
-            <div className="drum-pad" id={this.props.soundClip}>
-                <img class="pad-icon" src={IMGMAP[this.props.text]} />
+            <div className="drum-pad" id={this.props.soundClip} onClick={actions.handleClick}>
+                <img className="pad-icon" src={IMGMAP[this.props.text]} alt={this.props.soundClip}
+                     id={this.props.soundClip + '_icon'}/>
                 <audio className="clip" id={this.props.text} controls>
                     <source src={MAP[this.props.text]} />
                 </audio>
@@ -84,5 +73,4 @@ export default class DrumPad extends Component {
             </div>
         );
     }
-
 }

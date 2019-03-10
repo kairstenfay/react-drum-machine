@@ -13,10 +13,11 @@
 
 #drum-machine {
   width: 60vw;
-  height: 60vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
+  align-content: center;
 }
 .drum-pad {
   border: 1px solid black;
@@ -24,8 +25,8 @@
 }
 
 .pad-icon {
-  width: 100px;
-  height: auto;
+  width: auto;
+  max-height: 20vh;
 }
 
 audio {
