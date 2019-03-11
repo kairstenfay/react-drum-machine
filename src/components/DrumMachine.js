@@ -9,28 +9,34 @@ export default class DrumMachine extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: 'default',
+            displayText: 'default',
         };
-        this.messageHandler = this.messageHandler.bind(this);
+        this.eventHandler = this.eventHandler.bind(this);
+        this.setMessage = this.setMessage.bind(this);
     }
 
-    messageHandler(event) {
-        this.setState({
-            text: "a noise has been made",
-        });
+    eventHandler(event) {
+        console.log(event);
+        this.setMessage();
         event.type === 'click' ? actions.handleClick(event) : actions.handleKeyPress(event);
+    }
+
+    setMessage() {
+        this.setState({
+            displayText: "a noise has been made",
+        });
     }
 
     render() {
         let cells = [];
-        for (let key of Object.keys(CONSTANTS)) {
-            cells.push(<DrumPad key={key} soundClip={key} text={CONSTANTS[key].text} handler={this.messageHandler}/>);
+        for (let key of Object.keys(CONSTANTS.KEYS)) {
+            cells.push(<DrumPad key={key} soundClip={key} text={CONSTANTS.KEYS[key].text} handler={this.eventHandler}/>);
         }
 
         return (
             <div id="drum-machine">
                 {cells}
-                <Display innerText={this.state.text}/>
+                <Display displayText={this.state.displayText}/>
             </div>
         );
     }
