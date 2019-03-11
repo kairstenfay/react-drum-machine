@@ -8,39 +8,28 @@ const raccoon = require('./audio/Raccoon-J_Dawg-688727657.mp3');
 const turkey = require('./audio/Turkey_Call-JimBob-1691466258.mp3');
 const bluejay = require('./audio/bluejay_call-Mike_Koenig-591302150.mp3');
 
-const guineapigImg = require('./img/guineapig.png');
-const alpacaImg = require('./img/alpaca.png');
-const frogImg = require('./img/frog.png');
-const gibbonmonkeyImg = require('./img/gibbonmonkey.png');
-const horseImg = require('./img/horse.png');
-const labradorImg = require('./img/labrador.png');
-const raccoonImg = require('./img/raccoon.jpeg');
-const turkeyImg = require('./img/turkey.png');
-const bluejayImg = require('./img/bluejay.png');
+const guineapigimg = require('./img/guineapig.png');
+const alpacaimg = require('./img/alpaca.png');
+const frogimg = require('./img/frog.png');
+const gibbonmonkeyimg = require('./img/gibbonmonkey.png');
+const horseimg = require('./img/horse.png');
+const labradorimg = require('./img/labrador.png');
+const raccoonimg = require('./img/raccoon.jpeg');
+const turkeyimg = require('./img/turkey.png');
+const bluejayimg = require('./img/bluejay.png');
 
 module.exports = {
     MAP: {
-        Q: {innerText: 'guinea pig squealing', AUDIO: guineapig, IMG: guineapigImg},
-        W: {innerText: 'horse blowing', AUDIO: horseblow, IMG: horseImg},
-        E: {innerText: 'racoon squeaking', AUDIO: raccoon, IMG: raccoonImg},
-        A: {innerText: 'blue jay singing', AUDIO: bluejay, IMG: bluejayImg},
-        S: {innerText: 'alpaca grunting', AUDIO: alpaca, IMG: alpacaImg},
-        D: {innerText: 'frogs croaking', AUDIO: frogs, IMG: frogImg},
-        Z: {innerText: 'dog barking', AUDIO: labrador, IMG: labradorImg},
-        X: {innerText: 'turkey gobbling', AUDIO: turkey, IMG: turkeyImg},
-        C: {innerText: 'monkeys hooting', AUDIO: gibbonmonkey, IMG: gibbonmonkeyImg}
+        Q: {innerText: 'guinea pig squealing', audio: guineapig, img: guineapigimg},
+        W: {innerText: 'horse blowing', audio: horseblow, img: horseimg},
+        E: {innerText: 'racoon squeaking', audio: raccoon, img: raccoonimg},
+        A: {innerText: 'blue jay singing', audio: bluejay, img: bluejayimg},
+        S: {innerText: 'alpaca grunting', audio: alpaca, img: alpacaimg},
+        D: {innerText: 'frogs croaking', audio: frogs, img: frogimg},
+        Z: {innerText: 'dog barking', audio: labrador, img: labradorimg},
+        X: {innerText: 'turkey gobbling', audio: turkey, img: turkeyimg},
+        C: {innerText: 'monkeys hooting', audio: gibbonmonkey, img: gibbonmonkeyimg}
     },
-    // IMGMAP: {
-    //     Q: guineapigImg,
-    //     W: horseImg,
-    //     E: raccoonImg,
-    //     A: bluejayImg,
-    //     S: alpacaImg,
-    //     D: frogImg,
-    //     Z: labradorImg,
-    //     X: turkeyImg,
-    //     C: gibbonmonkeyImg
-    // },
 
     KEYS: {
         guineapig: {text: 'Q', src: '../audio/guinea-pig-daniel_simon.mp3'},

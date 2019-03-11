@@ -18,10 +18,10 @@ export default class DrumPad extends Component {
     render() {
         return (
             <div className="drum-pad" id={this.props.soundClip} onClick={this.props.handler}>
-                <img className="pad-icon" src={CONSTANTS.MAP[this.props.text].IMG} alt={this.props.soundClip}
+                <img className="pad-icon" src={CONSTANTS.MAP[this.props.text].img} alt={this.props.soundClip}
                      id={this.props.soundClip + '_icon'} />
                 <audio className="clip" id={this.props.text} controls>
-                    <source src={CONSTANTS.MAP[this.props.text].AUDIO} />
+                    <source src={CONSTANTS.MAP[this.props.text].audio} />
                 </audio>
                 {this.props.text}
             </div>

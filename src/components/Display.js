@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+const CONSTANTS = require('../constants.js');
 
 export default class Display extends Component {
 
@@ -10,9 +11,11 @@ export default class Display extends Component {
     }
 
     render() {
+        console.log(CONSTANTS.MAP[this.props.displayText]);  // TODO 
+
         return (
             <div id="display">
-                {this.props.innerText}
+                {/*{CONSTANTS.MAP[this.props.displayText]}*/}
             </div>
         );
     }

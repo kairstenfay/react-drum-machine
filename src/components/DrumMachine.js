@@ -17,20 +17,22 @@ export default class DrumMachine extends Component {
 
     eventHandler(event) {
         console.log(event);
-        this.setMessage();
-        event.type === 'click' ? actions.handleClick(event) : actions.handleKeyPress(event);
+        let key = event.type === 'click' ? actions.handleClick(event) : actions.handleKeyPress(event);
+        this.setMessage(key);
     }
 
-    setMessage() {
-        this.setState({
-            displayText: "a noise has been made",
+    setMessage(key) {
+        this.setState({  // TODO: update text using event key + MAP
+            displayText: key,
         });
     }
 
     render() {
         let cells = [];
         for (let key of Object.keys(CONSTANTS.KEYS)) {
-            cells.push(<DrumPad key={key} soundClip={key} text={CONSTANTS.KEYS[key].text} handler={this.eventHandler}/>);
+            cells.push(
+                <DrumPad key={key} soundClip={key} text={CONSTANTS.KEYS[key].text} handler={this.eventHandler} />
+            );
         }
 
         return (

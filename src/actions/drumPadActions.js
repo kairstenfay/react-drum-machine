@@ -8,13 +8,25 @@ function togglePlay(element) {
     element.paused ? element.play() : element.pause();
 }
 
-function handleKeyPress(event) { // event.type === 'keydown'
+/**
+ * Gets targeted element
+ *
+ * @param event
+ */
+function handleKeyPress(event) {  // event.type === 'keydown'
     const keyedElement = document.getElementById(event.key.toUpperCase());
     console.log(event.key);
 
     togglePlay(keyedElement);
+
+    return event.key.toUpperCase();
 }
 
+/**
+ * Gets targeted element
+ *
+ * @param event
+ */
 function handleClick(event) {  // event.type === 'click'
     const clickedElementId = event.target.id;
 
@@ -25,6 +37,8 @@ function handleClick(event) {  // event.type === 'click'
     console.log(key);
 
     togglePlay(clickedElement);
+
+    return key;
 }
 
 export default {handleKeyPress, handleClick};
