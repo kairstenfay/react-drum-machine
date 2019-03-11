@@ -18,7 +18,7 @@ export default class DrumMachine extends Component {
         this.setState({
             text: "a noise has been made",
         });
-        actions.handleClick(event);
+        event.type === 'click' ? actions.handleClick(event) : actions.handleKeyPress(event);
     }
 
     render() {

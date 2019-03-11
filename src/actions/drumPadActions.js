@@ -7,12 +7,13 @@ function togglePlay(element) {
     element.paused ? element.play() : element.pause();
 }
 
-function handleKeyPress(event) {
+function handleKeyPress(event) { // event.type === 'keydown'
+    console.log(event);
     const keyedElement = document.getElementById(event.key.toUpperCase());
     togglePlay(keyedElement);
 }
 
-function handleClick(event) {
+function handleClick(event) {  // event.type === 'click'
     const clickedElementId = event.target.id;
 
     // remap to drum pad
