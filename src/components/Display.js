@@ -12,6 +12,7 @@ export default class Display extends Component {
     render() {
         return (
             <div id="display">
+                {this.props.innerText}
             </div>
         );
     }
