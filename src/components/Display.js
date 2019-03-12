@@ -14,11 +14,12 @@ export default class Display extends Component {
 
     render() {
         let obj = CONSTANTS.MAP[this.props.displayText];
-        let displayText = obj ? obj.text : 'Press a drum pad to play a sound';
+        let displayText = obj ? obj.text : 'nothing yet. Press a drum pad to play a sound';
+        // TODO this displays any time an incorrect key is selected
 
         return (
             <div id="display">
-                {displayText}
+                You're listening to {displayText}
             </div>
         );
     }
