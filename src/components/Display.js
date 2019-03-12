@@ -9,13 +9,24 @@ export default class Display extends Component {
 
         };
     }
+    componentDidMount() {
+    }
 
     render() {
-        console.log(CONSTANTS.MAP[this.props.displayText]);  // TODO 
+        let obj = CONSTANTS.MAP[this.props.displayText];
+
+        let displayText;
+        if (obj) {
+            console.log(obj);
+            displayText = obj.innerText;
+        } else {
+            displayText = 'default';
+        }
+        console.log(displayText);
 
         return (
             <div id="display">
-                {/*{CONSTANTS.MAP[this.props.displayText]}*/}
+                {displayText}
             </div>
         );
     }
