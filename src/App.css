@@ -7,11 +7,15 @@
 
 header {
   background-color: sienna;
+  color: white;
+  font-size: 4em;
+  font-family: Lucida Grande, sans-serif;
 }
 
 #drum-machine {
   display: flex;
   padding: 50px;
+  justify-content: center;
 }
 
 #cells {
@@ -21,6 +25,7 @@ header {
   grid-gap: 10px;
   width: 50vw;
 }
+
 .drum-pad {
   border-top: 2px solid #eeefff;
   border-left: 2px solid #eee;
@@ -28,6 +33,10 @@ header {
   border-bottom: 1px solid grey;
   border-radius: 5px;
   background-color: white;
+  font-size: 2em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: flex-end;
 }
 
 .pad-icon {
@@ -36,14 +45,15 @@ header {
 }
 
 audio {
-  width: 0;
-  height: 0;
+  display: None;
 }
 
 #display {
+  background-color: white;
+  height: 100%;
   padding: 10px;
   margin: 10px;
   border: 1px solid grey;
+  border-radius: 5px;
   align-self: center;
-  width: 10vw;
 }
