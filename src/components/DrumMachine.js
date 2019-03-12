@@ -16,13 +16,12 @@ export default class DrumMachine extends Component {
     }
 
     eventHandler(event) {
-        console.log(event);
         let key = event.type === 'click' ? actions.handleClick(event) : actions.handleKeyPress(event);
         this.setMessage(key);
     }
 
     setMessage(key) {
-        this.setState({  // TODO: update text using event key + MAP
+        this.setState({
             displayText: key,
         });
     }
@@ -31,13 +30,16 @@ export default class DrumMachine extends Component {
         let cells = [];
         for (let key of Object.keys(CONSTANTS.KEYS)) {
             cells.push(
-                <DrumPad key={key} soundClip={key} text={CONSTANTS.KEYS[key].text} handler={this.eventHandler} />
+                <DrumPad key={key} soundClip={key} text={CONSTANTS.KEYS[key].text}
+                         handler={this.eventHandler} />
             );
         }
 
         return (
             <div id="drum-machine">
-                {cells}
+                <div id="cells">
+                    {cells}
+                </div>
                 <Display displayText={this.state.displayText}/>
             </div>
         );

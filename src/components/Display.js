@@ -14,15 +14,7 @@ export default class Display extends Component {
 
     render() {
         let obj = CONSTANTS.MAP[this.props.displayText];
-
-        let displayText;
-        if (obj) {
-            console.log(obj);
-            displayText = obj.innerText;
-        } else {
-            displayText = 'default';
-        }
-        console.log(displayText);
+        let displayText = obj ? obj.text : 'Press a drum pad to play a sound';
 
         return (
             <div id="display">

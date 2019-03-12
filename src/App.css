@@ -1,27 +1,33 @@
 .App {
   text-align: center;
+  background-color: azure;
+  height: 100vh;
+  width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  background-color: sienna;
 }
 
 #drum-machine {
-  width: 60vw;
-  height: 100vh;
+  display: flex;
+  padding: 50px;
+}
+
+#cells {
+  align-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  align-content: center;
+  width: 50vw;
 }
 .drum-pad {
-  border: 1px solid black;
+  border-top: 2px solid #eeefff;
+  border-left: 2px solid #eee;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
   border-radius: 5px;
+  background-color: white;
 }
 
 .pad-icon {
@@ -35,5 +41,9 @@ audio {
 }
 
 #display {
-  height: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid grey;
+  align-self: center;
+  width: 10vw;
 }

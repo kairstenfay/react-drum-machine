@@ -20,15 +20,15 @@ const bluejayimg = require('./img/bluejay.png');
 
 module.exports = {
     MAP: {
-        Q: {innerText: 'guinea pig squealing', audio: guineapig, img: guineapigimg},
-        W: {innerText: 'horse blowing', audio: horseblow, img: horseimg},
-        E: {innerText: 'racoon squeaking', audio: raccoon, img: raccoonimg},
-        A: {innerText: 'blue jay singing', audio: bluejay, img: bluejayimg},
-        S: {innerText: 'alpaca grunting', audio: alpaca, img: alpacaimg},
-        D: {innerText: 'frogs croaking', audio: frogs, img: frogimg},
-        Z: {innerText: 'dog barking', audio: labrador, img: labradorimg},
-        X: {innerText: 'turkey gobbling', audio: turkey, img: turkeyimg},
-        C: {innerText: 'monkeys hooting', audio: gibbonmonkey, img: gibbonmonkeyimg}
+        Q: {text: 'guinea pig squealing', audio: guineapig, img: guineapigimg},
+        W: {text: 'horse blowing', audio: horseblow, img: horseimg},
+        E: {text: 'racoon squeaking', audio: raccoon, img: raccoonimg},
+        A: {text: 'blue jay singing', audio: bluejay, img: bluejayimg},
+        S: {text: 'alpaca grunting', audio: alpaca, img: alpacaimg},
+        D: {text: 'frogs croaking', audio: frogs, img: frogimg},
+        Z: {text: 'dog barking', audio: labrador, img: labradorimg},
+        X: {text: 'turkey gobbling', audio: turkey, img: turkeyimg},
+        C: {text: 'monkeys hooting', audio: gibbonmonkey, img: gibbonmonkeyimg}
     },
 
     KEYS: {
