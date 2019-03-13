@@ -8,23 +8,12 @@
 header {
   background-color: sienna;
   color: white;
-  font-size: 4em;
   font-family: Lucida Grande, sans-serif;
   border-bottom: 1px solid grey;
 }
 
 #drum-machine {
-  padding: 50px;
-  display: flex;
   justify-content: center;
-}
-
-#cells {
-  align-content: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-  width: 50vw;
 }
 
 .drum-pad {
@@ -34,12 +23,72 @@ header {
   border-bottom: 1px solid grey;
   border-radius: 5px;
   background-color: white;
-  font-size: 2em;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   align-items: end;
   justify-items: end;
 }
+
+#cells {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+@media only screen and (min-width: 769px) {
+  header {
+    font-size: 4em;
+  }
+
+  #drum-machine {
+    padding: 50px;
+  }
+
+  .drum-pad {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 2em;
+  }
+
+  #display {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    font-size: 2em;
+  }
+  .drum-pad {
+    grid-template-rows: 2fr 1fr;
+    font-size: 0;
+  }
+  .pad-icon {
+    max-width: 20vw;
+  }
+
+  #drum-machine {
+    padding: 15px;
+  }
+
+  #display {
+    font-size: 1.0em;
+    padding: 7px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    font-size: 1.2em;
+  }
+
+  #display {
+    font-size: 0.7em;
+    padding: 3px;
+  }
+}
+
+
 
 .pad-icon {
   width: auto;
@@ -53,10 +102,8 @@ audio {
 #display {
   background-color: sienna;
   color: white;
-  padding: 10px;
-  margin: 10px;
+  margin: 10px 0;
   border: 1px solid grey;
-  width: 20vw;
   border-radius: 5px;
   align-self: center;
   font-family: Lucida Grande, sans-serif;
