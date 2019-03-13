@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 const CONSTANTS = require('../constants.js');
 
-export default class Display extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        };
-    }
-    componentDidMount() {
-    }
+export default class Display extends Component {  // TODO make stateless function
 
     render() {
         let obj = CONSTANTS.MAP[this.props.displayText];
