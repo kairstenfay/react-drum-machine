@@ -1,8 +1,14 @@
+body {
+  background-color: azure;
+}
+
 .App {
   text-align: center;
-  background-color: azure;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -12,8 +18,18 @@ header {
   border-bottom: 1px solid grey;
 }
 
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: .8em;
+}
+
 #drum-machine {
   justify-content: center;
+  align-self: center;
 }
 
 .drum-pad {
@@ -25,6 +41,7 @@ header {
   background-color: white;
   align-items: end;
   justify-items: end;
+  display: flex;
 }
 
 #cells {
@@ -34,65 +51,10 @@ header {
   grid-gap: 10px;
 }
 
-@media only screen and (min-width: 769px) {
-  header {
-    font-size: 4em;
-  }
-
-  #drum-machine {
-    padding: 50px;
-  }
-
-  .drum-pad {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    font-size: 2em;
-  }
-
-  #display {
-    font-size: 1.2em;
-    padding: 10px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  header {
-    font-size: 2em;
-  }
-  .drum-pad {
-    grid-template-rows: 2fr 1fr;
-    font-size: 0;
-  }
-  .pad-icon {
-    max-width: 20vw;
-  }
-
-  #drum-machine {
-    padding: 15px;
-  }
-
-  #display {
-    font-size: 1.0em;
-    padding: 7px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  header {
-    font-size: 1.2em;
-  }
-
-  #display {
-    font-size: 0.7em;
-    padding: 3px;
-  }
-}
-
-
-
 .pad-icon {
   width: auto;
   max-height: 20vh;
+  align-self: flex-end
 }
 
 audio {
@@ -107,4 +69,68 @@ audio {
   border-radius: 5px;
   align-self: center;
   font-family: Lucida Grande, sans-serif;
+}
+
+@media only screen and (min-width: 769px) {
+  h1 {
+    font-size: 2.8em;
+  }
+
+  #drum-machine {
+    padding: 50px;
+  }
+
+  .drum-pad {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 2em;
+    padding: 5px;
+  }
+
+  #display {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .drum-pad {
+    grid-template-rows: 2fr 1fr;
+    font-size: 0;
+  }
+  .pad-icon {
+    max-width: 20vw;
+  }
+
+  #drum-machine {
+    padding: 15px;
+  }
+
+  #display {
+    font-size: .8em;
+    padding: 7px;
+  }
+
+  footer {
+    font-size: .5em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  #display {
+    font-size: 0.7em;
+    padding: 3px;
+  }
 }

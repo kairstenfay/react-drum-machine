@@ -14,10 +14,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          DJ Animal Farm
+            <h1>DJ Animal Farm</h1>
         </header>
           <DrumMachine />
-        </div>
+      <footer>
+          “All animals are equal, but some animals are more equal than others.”
+      </footer>
+      </div>
     );
   }
 }
